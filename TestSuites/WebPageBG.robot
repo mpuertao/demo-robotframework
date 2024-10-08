@@ -10,7 +10,7 @@ Force Tags      REGRESION
 *** Test Cases ***
 Validate Calculator Credit Mortgage with recalculate succesful
     [Tags]                      CH
-    [Documentation]             CP1 validate login succesful with credentials valid
+    [Documentation]             CP1 validate login succesful with credentials valid.
     maximize browser window
     Click Element               id=wt-cli-accept-all-btn
     Click Element               xpath=//a[@data-order-default='Calcula tu préstamo hipotecario']
