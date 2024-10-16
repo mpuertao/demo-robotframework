@@ -1,0 +1,3 @@
+*** Settings ***
+
+Documentation    TODOS LOS KEYWORDS COMUNES A TODOS LOS MODULOS (EJM: CLICK CUSTOM)
