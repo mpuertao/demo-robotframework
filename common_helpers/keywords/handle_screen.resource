@@ -4,8 +4,8 @@ Documentation    Keywords for actiosn transversals of mobile testing
 Library    AppiumLibrary
 
 *** Variables ***
-${USERNAME}         mauriciopuertaos_eiKIlh
-${ACCESS_KEY}       FQzqfvpxhiRrzs6TyAx8
+${USERNAME}         usuario de cada estudiante
+${ACCESS_KEY}       acceskey de cada estudiante
 ${REMOTE_URL}       http://${USERNAME}:${ACCESS_KEY}@hub-cloud.browserstack.com/wd/hub
 #${REMOTE_URL}       http://localhost:4723
 ${AUTOMATIONNAME}   UIAutomator2

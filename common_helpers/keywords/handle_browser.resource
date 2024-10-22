@@ -1,11 +1,11 @@
 *** Settings ***
 Library     SeleniumLibrary
 
+
 Resource    ../resources/variables_sets.resource
 
 *** Variables ***
 ${URL_BGENERAL}     ${URL_BG}
-
 
 *** Keywords ***
 Open Browser With Attributes
