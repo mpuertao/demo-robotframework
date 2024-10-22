@@ -2,5 +2,5 @@
 
 *** Variables ***
 
-${URL_A}    https://a.com
-${URL_B}    https://b.com
+${URL_BG}     https://bgeneral.com/
+${URL_SAUCEDEMO}    https://saucedemo.com/

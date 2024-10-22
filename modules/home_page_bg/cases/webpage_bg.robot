@@ -2,6 +2,7 @@
 Documentation       Test for web page banco general
 
 Library             SeleniumLibrary
+
 Resource            ../../../common_helpers/keywords/keywords_sets.resource
 Resource            ../helpers/keywords/keywords_sets.resource
 
