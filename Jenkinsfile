@@ -25,8 +25,12 @@ pipeline {
 
         stage('Ejecutar Pruebas') {
             steps {
-                // Ejecutar pruebas usando la tarea de Robot Framework
-                robot runTests: true, outputPath: 'results', outputFileName: 'output.xml', testCases: '**/webpage_bg.robot'
+               // Ejecutar pruebas de Robot Framework y guardar reportes en el directorio 'results'
+                sh '''
+                    source ${PYTHON_ENV}/bin/activate
+                    mkdir -p results
+                    robot -d results modules/home_page_bg/cases/webpage_bg.robot
+                '''
             }
             post {
                 always {
