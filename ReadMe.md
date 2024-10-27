@@ -22,8 +22,8 @@ Para ejecutar este proyecto, asegúrate de tener los siguientes requisitos:
 1. **Clona este repositorio**:
 
    ```bash
-   git clone https://github.com/tu-usuario/tu-proyecto.git
-   cd tu-proyecto
+   git clone https://github.com/mpuertao/demo-robotframework.git
+   cd demo-robotframework
    ```
 
 2. **Instala las dependencias**:
