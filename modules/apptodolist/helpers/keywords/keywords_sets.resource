@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    ***
+Documentation    ****
 
 Resource    ../../../../common_helpers/keywords/keywords_sets.resource
-Resource    apptodolist.resource
+Resource    apptodolist_tasks.resource

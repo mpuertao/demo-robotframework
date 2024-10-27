@@ -1,7 +1,5 @@
 *** Settings ***
-Documentation    ******
-
-Library     AppiumLibrary
+Documentation    tests for app todolist section tasks
 
 Resource    ../helpers/keywords/keywords_sets.resource
 
@@ -9,12 +7,13 @@ Test Setup    Open Mobile Application
 Test Teardown    Close Application
 
 *** Variables ***
-${TEXT_TASK}            Mao Puerta
-${TEXT_TASK_EXPECTED}   Mao Puerta
+${text_task}    Mao Puerta Clase 4
+${text_task_expected}      Mao Puerta Clase 4
 
 *** Test Cases ***
-CP1: Add Task Successful
-    Add Task    ${TEXT_TASK}
+CP1: Add tasks
+    Add Task    ${text_task}
     Select Runway
-    Validate Add Task   ${TEXT_TASK_EXPECTED}
+    Validate Task Created   ${text_task_expected}
 
+*** Keywords ***

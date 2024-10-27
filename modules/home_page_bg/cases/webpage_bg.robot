@@ -6,14 +6,14 @@ Library             SeleniumLibrary
 Resource            ../../../common_helpers/keywords/keywords_sets.resource
 Resource            ../helpers/keywords/keywords_sets.resource
 
-Test Setup          Open Browser With Attributes    ${URL}    ${BROWSER}    ${PAGE_TITLE}
+Test Setup          Open Browser With Attributes    ${URL_BGENERAL}     ${BROWSER}      ${PAGE_TITLE}
 Test Teardown       Close Browser
 
 Force Tags          regresion
 
 
 *** Variables ***
-${URL}                          https://www.bgeneral.com/
+${URL_BGENERAL}                 https://bgeneral.com/
 ${BROWSER}                      chrome
 ${PAGE_TITLE}                   Personas - Banco General Panamá
 ${type_property_usada}          Hip_seg

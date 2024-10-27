@@ -1,4 +1,6 @@
 *** Settings ***
+Documentation    test for invalid login in saucedemo with templates of RF
+
 
 Resource    ../../../common_helpers/keywords/keywords_sets.resource
 Resource    ../helpers/keywords/keywords_sets.resource
@@ -14,8 +16,8 @@ ${BROWSER}      chrome
 ${PAGE_TITLE}   Swag Labs
 
 
-*** Test Cases ***
-CP1: error user
+*** Test Cases ***  USERNAME    PASSWORD
+CP1: error login with user and pass incorrect
     [Template]    Invalid Login
                     error_user  1234
                     error_user  q3rqr
