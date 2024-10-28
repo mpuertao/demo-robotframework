@@ -22,11 +22,12 @@ pipeline {
                 '''
             }
         }
-        stage('Set PATH') {
+        stage('display') {
             steps {
                 // Agregar /apps/chrome_driver al PATH temporalmente para el trabajo
                 sh '''
-                    export PATH=$PATH:/apps/chrome_driver
+                    export DISPLAY=:99
+                    Xvfb :99 -screen 0 1920x1080x24 &
                    '''
             }
         }
