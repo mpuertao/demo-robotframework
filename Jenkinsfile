@@ -15,7 +15,7 @@ pipeline {
 
                 // Instalar Python y dependencias
                 sh '''
-                    python -m venv ${PYTHON_ENV}
+                    python3.12 -m venv ${PYTHON_ENV}
                     source ${PYTHON_ENV}/bin/activate
                     pip install --upgrade pip
                     pip install -r requirements.txt
