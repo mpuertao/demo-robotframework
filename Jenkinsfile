@@ -28,13 +28,14 @@ pipeline {
                 sh '''
                     source ${PYTHON_ENV}/bin/activate
                     mkdir -p results
-                    robot -d results modules/home_page_bg/cases/webpage_bg.robot
+                    robot -d results/ modules/home_page_bg/cases/webpage_bg.robot
                 '''
             }
             post {
                 always {
                     // Publicar reportes, incluso si las pruebas fallan
-                    archiveArtifacts artifacts: 'results/*.html', allowEmptyArchive: true
+                    robot "results"
+                    archiveArtifacts artifacts: "results/*", allowEmptyArchive: true
                 }
                 success {
                     echo 'Pruebas completadas con éxito'
@@ -43,27 +44,6 @@ pipeline {
                     echo 'Hubo errores en las pruebas'
                 }
             }
-        }
-
-        stage('Publicar Reportes') {
-            steps {
-                // Publicar los resultados en Jenkins
-                publishHTML (target: [
-                    reportDir: 'results',
-                    reportFiles: 'report.html, log.html',
-                    reportName: 'Robot Framework Test Report'
-                ])
-            }
-        }
-    }
-
-    post {
-        always {
-            // Limpiar el entorno de Python
-            sh 'rm -rf ${PYTHON_ENV}'
-        }
-        cleanup {
-            echo 'Limpieza completa'
         }
     }
 }
