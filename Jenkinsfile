@@ -22,7 +22,14 @@ pipeline {
                 '''
             }
         }
-
+        stage('Set PATH') {
+            steps {
+                // Agregar /apps/chrome_driver al PATH temporalmente para el trabajo
+                sh '''
+                    export PATH=$PATH:/apps/chrome_driver
+                   '''
+            }
+        }
         stage('Ejecutar Pruebas') {
             steps {
                // Ejecutar pruebas de Robot Framework y guardar reportes en el directorio 'results'

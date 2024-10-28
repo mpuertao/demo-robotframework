@@ -13,8 +13,10 @@ ${CHROME_OPTIONS}    --disable-dev-shm-usage
 Open Browser With Attributes
     [Arguments]    ${URL}   ${BROWSER}   ${PAGE_TITLE}
     ${options}  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys
-    Call Method  ${options}  add_argument  --no-sandbox
-    Call Method  ${options}  add_argument  --disable-dev-shm-usage
+    Call Method  ${options}     add_argument    --no-sandbox
+    Call Method  ${options}     add_argument    --disable-dev-shm-usage
+    Call Method  ${options}     add_argument    --remote-debugging-port=9222
+    Call Method  ${options}     add_argument    --disable-gpu
     seleniumlibrary.Open Browser    ${URL}    headlesschrome    options=${options}
     seleniumlibrary.maximize browser window
     title should be    ${PAGE_TITLE}
