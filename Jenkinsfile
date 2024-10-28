@@ -28,7 +28,7 @@ pipeline {
                 sh '''
                     source ${PYTHON_ENV}/bin/activate
                     mkdir -p results
-                    robot -d results/ --variable browser:"%browser%" modules/home_page_bg/cases/webpage_bg.robot
+                    robot -d results/ --variable browser:${browser} modules/home_page_bg/cases/webpage_bg.robot
                 '''
             }
             post {
