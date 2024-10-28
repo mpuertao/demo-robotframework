@@ -22,15 +22,6 @@ pipeline {
                 '''
             }
         }
-        stage('display') {
-            steps {
-                // Agregar /apps/chrome_driver al PATH temporalmente para el trabajo
-                sh '''
-                    export DISPLAY=:99
-                    Xvfb :99 -screen 0 1920x1080x24 &
-                   '''
-            }
-        }
         stage('Ejecutar Pruebas') {
             steps {
                // Ejecutar pruebas de Robot Framework y guardar reportes en el directorio 'results'
