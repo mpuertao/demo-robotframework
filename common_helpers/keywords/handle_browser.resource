@@ -3,7 +3,7 @@ Documentation       Keyword for Manage browser with url
 
 Library    SeleniumLibrary
 
-Resource    ../resources/variables_sets.resource
+#Resource    ../resources/variables_sets.resource
 
 *** Variables ***
 ${URL_BGeneral}        https://bgeneral.com/
@@ -12,7 +12,10 @@ ${CHROME_OPTIONS}    --disable-dev-shm-usage
 *** Keywords ***
 Open Browser With Attributes
     [Arguments]    ${URL}   ${BROWSER}   ${PAGE_TITLE}
-    seleniumlibrary.Open Browser    ${URL}    headlesschrome    options=${CHROME_OPTIONS}
+    ${options}  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys
+    Call Method  ${options}  add_argument  --no-sandbox
+    Call Method  ${options}  add_argument  --disable-dev-shm-usage
+    seleniumlibrary.Open Browser    ${URL}    headlesschrome    options=${options}
     seleniumlibrary.maximize browser window
     title should be    ${PAGE_TITLE}
     IF    '${URL}' == '${URL_BGeneral}'
