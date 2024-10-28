@@ -1,10 +1,7 @@
 *** Settings ***
 
 *** Variables ***
-${URL_BGENERAL}                 https://bgeneral.com/
-${BROWSER}                      chrome
-${PAGE_TITLE}                   Personas - Banco General Panamá
-${URL_BG}                       https://bgeneral.com/
+${URL_BG}                       https://www.bgeneral.com/
 ${URL_SAUCEDEMO}                https://saucedemo.com/
 
 ${REMOTE_URL}       http://127.0.0.1:4723

@@ -7,7 +7,7 @@ Resource    ../page_objects/variables_sets.resource
 *** Keywords ***
 Select And Calculate Mortgage Loan
     [Arguments]                     ${type_property}    ${property-value}
-    seleniumlibrary.scroll element into view        ${MORTGAGELOAN_HOMEPAGE_BUTTON}
+    #seleniumlibrary.scroll element into view        ${MORTGAGELOAN_HOMEPAGE_BUTTON}
     seleniumlibrary.Click Element                   ${MORTGAGELOAN_HOMEPAGE_BUTTON}
     seleniumlibrary.wait until element is enabled   ${TYPEPROPERTY_HOMEPAGE_SELECT}
     seleniumlibrary.Select From List By Value       ${TYPEPROPERTY_HOMEPAGE_SELECT}    ${type_property}

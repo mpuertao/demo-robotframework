@@ -4,7 +4,7 @@ Documentation    ***
 Library    AppiumLibrary
 
 
-#Resource    ../resources/variables_sets.resource
+Resource    ../resources/variables_sets.resource
 
 *** Variables ***
 

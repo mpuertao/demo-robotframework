@@ -3,10 +3,10 @@ Documentation       Keyword for Manage browser with url
 
 Library    SeleniumLibrary
 
-#Resource    ../resources/variables_sets.resource
+Resource    ../resources/variables_sets.resource
 
 *** Variables ***
-${URL_BGeneral}        https://bgeneral.com/
+${URL_BGeneral}        https://www.bgeneral.com/
 ${CHROME_OPTIONS}    --disable-dev-shm-usage
 
 *** Keywords ***

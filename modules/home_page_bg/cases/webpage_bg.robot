@@ -13,7 +13,7 @@ Force Tags          regresion
 
 
 *** Variables ***
-${URL_BGENERAL}                 https://bgeneral.com/
+${URL_BGENERAL}                 https://www.bgeneral.com/
 ${BROWSER}                      headlessfirefox
 ${PAGE_TITLE}                   Personas - Banco General Panamá
 ${type_property_usada}          Hip_seg
