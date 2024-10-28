@@ -7,12 +7,12 @@ Resource    ../resources/variables_sets.resource
 
 *** Variables ***
 ${URL_BGeneral}        https://bgeneral.com/
-${CHROME_OPTIONS}    --headless    --no-sandbox    --disable-dev-shm-usage
+${CHROME_OPTIONS}    --headless    --no-sandbox    --disable-dev-shm-usage  --disable-gpu    --window-size=1920x1080
 
 *** Keywords ***
 Open Browser With Attributes
     [Arguments]    ${URL}   ${BROWSER}   ${PAGE_TITLE}
-    seleniumlibrary.Open Browser    ${URL}    ${BROWSER}    ${CHROME_OPTIONS}
+    seleniumlibrary.Open Browser    ${URL}    ${BROWSER}    options=${CHROME_OPTIONS}
     seleniumlibrary.maximize browser window
     title should be    ${PAGE_TITLE}
     IF    '${URL}' == '${URL_BGeneral}'
