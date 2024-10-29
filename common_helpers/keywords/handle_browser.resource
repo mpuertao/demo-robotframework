@@ -3,7 +3,7 @@ Documentation       Keyword for Manage browser with url
 
 Library    SeleniumLibrary
 
-#Resource    ../resources/variables_sets.resource
+Resource    ../resources/variables_sets.resource
 
 *** Variables ***
 ${URL_BGeneral}        https://www.bgeneral.com/
@@ -11,7 +11,7 @@ ${URL_BGeneral}        https://www.bgeneral.com/
 
 *** Keywords ***
 Open Browser With Attributes
-    [Arguments]    ${URL}   ${BROWSER}=headlessfirefox   ${PAGE_TITLE}
+    [Arguments]    ${URL}   ${BROWSER}   ${PAGE_TITLE}
     set selenium implicit wait      10seconds
     seleniumlibrary.Open Browser    ${URL}    ${BROWSER}
     seleniumlibrary.maximize browser window
