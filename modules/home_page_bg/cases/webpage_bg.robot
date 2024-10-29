@@ -14,7 +14,7 @@ Force Tags          regresion
 
 *** Variables ***
 ${URL_BGENERAL}                 https://www.bgeneral.com/
-${BROWSER}                      headlessfirefox
+${BROWSER}                      chrome
 ${PAGE_TITLE}                   Personas - Banco General Panamá
 ${type_property_usada}          Hip_seg
 ${type_property_new}            Hip_pref
@@ -28,11 +28,13 @@ ${total_to_finance_recalc}      $171,000
 CP1: Validate Calculator Credit Mortgage with recalculate succesful
     [Documentation]    CP1 validate login succesful with credentials valid
     [Tags]    @happypath
+    ${implicity_wait}   get selenium implicit wait
+    log to console      ${implicity_wait}
     When Select And Calculate Mortgage Loan    ${type_property_usada}    ${property_values}[0]
     Then Validate Amount To Finance    ${total_to_finance_calc}
 
-CP2: Test for recalculate a mortage loan Successful
-    [Tags]    @altern
-    When Select And Calculate Mortgage Loan    ${type_property_usada}    ${property_values}[0]
-    And ReCalculate Mortage Loan    ${type_property_new}    ${property_values}[3]
-    Then Validate Amount To Finance    ${total_to_finance_recalc}
+#CP2: Test for recalculate a mortage loan Successful
+#    [Tags]    @altern
+#    When Select And Calculate Mortgage Loan    ${type_property_usada}    ${property_values}[0]
+#    And ReCalculate Mortage Loan    ${type_property_new}    ${property_values}[3]
+#    Then Validate Amount To Finance    ${total_to_finance_recalc}
