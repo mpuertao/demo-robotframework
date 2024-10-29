@@ -28,7 +28,7 @@ Select Runway
     ${height_total}   get window height
     ${x_absolute}   evaluate    ${PROM_X} * ${width_total}
 
-    FOR    ${PROM_Y}    IN RANGE    ${INI_PROM_Y}    ${END_PROM_Y}      0.01
+    FOR    ${PROM_Y}    IN RANGE    ${INI_PROM_Y}    ${END_PROM_Y}      0.005
         log to console      ${PROM_Y}
         log                 ${PROM_Y}
         ${y_absolute}=  Evaluate    int(${PROM_Y} * ${height_total})
