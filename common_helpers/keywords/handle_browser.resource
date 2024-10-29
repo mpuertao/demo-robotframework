@@ -22,7 +22,3 @@ Open Browser With Attributes
         seleniumlibrary.wait until page contains element    id=menu-topmenu-oficinas
         Log To Console   '### LOGGED IN WEBPAGE BGENERAL ###'
     END
-
-
-
-    seleniumlibrary.wait until location contains
